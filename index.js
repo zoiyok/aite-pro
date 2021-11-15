@@ -15,8 +15,6 @@ function imgPreview(fileDom){
 	} else {
 		alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
 	}
-
-	//获取文件
 	var file = fileDom.files[0];
 	var imageType = /^image\//;
 	//是否是图片
@@ -31,9 +29,11 @@ function imgPreview(fileDom){
 		//图片路径设置为读取的图片
 		img.src = e.target.result;
 		img.border = "6px dashed ";
-		img.style.borderColor = "rgba(0, 0, 0, 0.2)";
-		img.style.borderRadius = "25px";
+		img.style.borderColor = "rgba(255, 255, 255, 0.4)";
+		img.style.borderRadius = "28px";
 		img.style.borderStyle = "dashed";
+		img.style.width = "188px";
+		img.style.height = "188px";
 		flag = 1;
 	};
 	reader.readAsDataURL(file);
